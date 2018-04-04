@@ -11,8 +11,11 @@
 </script>
 
 <style lang="less">
+
+  @import "components/Core/colors.less";
+
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Raleway;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -20,67 +23,73 @@
     margin-top: 60px;
   }
   body {
-      background: linear-gradient( 0.25turn, #FF803B, #FFAE66, #FF803B );
+      background: white;
   }
   .headline-text-view {
-    color: #555555;
+    color: @hop_charcoal;
     font-size: 28px;
     font-weight: bold;
   }
   .title-text-view {
-    color: #555555;
+    color: @hop_charcoal;
     font-size: 24px;
     font-weight: bold;
   }
   .subtitle-text-view {
-    color: #555555;
+    color: @hop_charcoal;
     font-size: 20px;
     font-weight: bold;
   }
   .copy-text-view {
-    color: #555555;
+    color: @hop_charcoal;
     font-size: 16px;
     font-weight: normal;
   }
   .bold-copy-text-view {
-    color: #555555;
+    color: @hop_charcoal;
     font-size: 16px;
     font-weight: bold;
   }
   .subcopy-text-view {
-    color: #b5b5b5;
+    color: @hop_grey;
     font-size: 16px;
     font-weight: normal;
   }
   .urgentcopy-text-view {
-    color: #FF803B;
+    color: @hop_orange;
     font-size: 16px;
     font-weight: bold;
   }
+  .inline-link-text-view {
+    color: @hop_charcoal;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: underline;
+  }
   .subtext-text-view {
-    color: #b5b5b5;
+    color: @hop_grey;
     font-size: 12px;
     font-weight: normal;
   }
   .lateral-cta-button {
     background-color: white;
     border-radius: 4px;
-    border: 1px solid #555555;
+    border: 1px solid @hop_charcoal;
     padding: 13px 16px;
     font-size: 24px;
     font-weight: normal;
     cursor: pointer;
-    color: #555555;
+    color: @hop_charcoal;
     &:focus {
       outline: none;
     }
     &.disabled {
-      color: #b5b5b5;
-      border-color: #b5b5b5;
+      color: @hop_grey;
+      border-color: @hop_grey;
     }
   }
    .advancing-cta-button {
-    background-color: #FF803B;
+    background-color: @hop_orange;
     border-radius: 4px;
     border: none;
     padding: 13px 16px;
@@ -92,7 +101,7 @@
       outline: none;
     }
     &.disabled {
-      background-color: #b5b5b5;
+      background-color: @hop_grey;
     }
     &.giant {
       font-size: 40px;
@@ -104,22 +113,21 @@
     border: none;
     font-size: 20px;
     font-weight: normal;
-    color: #b5b5b5;
+    color: @hop_grey;
     cursor: pointer;
     &:focus {
       outline: none;
     }
   }
-  .human-input-bar {
-    text-align: center;
-    color: #555555;
+  .edit-text-input {
+    background: transparent;
+    border: none;
+    color: @hop_charcoal;
     font-size: 16px;
-    font-weight: normal;
-    background: white;
-    border: 1px solid #D8D8D8;
-    border-radius: 4px;
+    font-weight: bold;
+    caret-color: @hop_orange;
     &::placeholder {
-      color: #b5b5b5;
+      color: @hop_grey;
     }
     &:focus {
       outline: none;
