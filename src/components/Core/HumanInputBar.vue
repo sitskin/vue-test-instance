@@ -9,7 +9,7 @@
 
 		<img src="../../assets/ic_hib_plus.png" class="human-input-bar-plus" :class="{ hidden: ! showPlus }" @click="clickPlus">
 		<input class="human-input-bar-input" :type="inputType" :placeholder="hint" :value="inputValue" >
-		<button class="human-input-bar-submit"> Send </button>
+		<button class="human-input-bar-submit" @click="clickSend"> Send </button>
 	</div>
 </template>
 

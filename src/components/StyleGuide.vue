@@ -92,15 +92,48 @@
 		<div class="style">
 			<input type="text" class="edit-text-input" placeholder="Begin typing here...">
 		</div>
+
+		<div class="title title-text-view"> Chart </div>
+
+		<div class="style chart">
+			<chart :id="chart1.id" :options="chart1.options" />
+		</div>
 	</div>
 </template>
 
 <script>
 
 	import HumanInputBar from '@/components/Core/HumanInputBar';
+	import Chart from '@/components/Core/Chart';
 
 	var styleGuideData = {
-		hibInput: "",
+		hibInput: '',
+		chart1: {
+			id: 'chart1',
+			options: {
+				data: {
+					labels: [ 'Jan', 'Feb', 'Mar' ],
+					datasets: [
+						{
+							name: 'Amli on 2nd',
+							values: [ 2, 5, 9 ],
+						},
+						{
+							name: 'The Davis SoCo',
+							values: [ 1, 3, 4 ],
+						},
+						{
+							name: 'The Kensie Domain',
+							values: [ 8, 6, 2 ],
+						},
+					],
+				},
+				title: 'Redemptions',
+				colors: [ '#555555', '#FF803B', '#FF403B' ],
+				height: 200,
+				type: 'bar',
+			},
+		},
 	};
 
 	export default {
@@ -122,7 +155,7 @@
 				console.log( 'lateral cta click' );
 			},
 		},
-		components: { HumanInputBar },
+		components: { HumanInputBar, Chart },
 	};
 </script>
 
@@ -147,10 +180,7 @@
 		font-weight: bold;
 		border-radius: 4px;
 	}
-	.cta {
-		align-self: stretch;
-	}
-	.hib {
+	.cta, .hib, .chart {
 		align-self: stretch;
 	}
 	button {
